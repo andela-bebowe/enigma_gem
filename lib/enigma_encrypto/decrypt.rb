@@ -24,8 +24,8 @@ module EnigmaEncrypto
 
     def check_command_args
       if ("%05d" % (@key.to_i)).size != 5 || ("%06d" % (@date.to_i)).size != 6
-        return false; end
         puts "Incorrect key or date entered"
+        return false; end
       operation = @file_handler.check_file_useability(@encrypted, @decrypted)
       return false if operation == false || operation == "c"
       File.truncate(@decrypted, 0) if operation == "w"

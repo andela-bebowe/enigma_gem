@@ -28,6 +28,7 @@ module EnigmaEncrypto
 
     def check_command_args
       if ("%06d" % (@date.to_i)).size != 6 || @date.to_i <= 0
+        puts "Incorrect date entered"
         return false
       end
       operation = @file_handler.check_file_useability(@encrypted, @cracked)

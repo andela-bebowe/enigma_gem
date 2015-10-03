@@ -1,5 +1,5 @@
 require "enigma_encrypto/version"
-require_relative "enigma_encrypto/crack"
+require "enigma_encrypto/crack"
 require "enigma_encrypto/encrypt"
 require "enigma_encrypto/decrypt"
 
