@@ -1,0 +1,11 @@
+require "coveralls"
+Coveralls.wear!
+require_relative "../lib/crack"
+require_relative "../lib/dateoffset_gen"
+require_relative "../lib/decrypt"
+require_relative "../lib/encrypt"
+require_relative "../lib/file_handler"
+require_relative "../lib/key_gen"
+require_relative "../lib/rotator"
+require_relative "../lib/rotation_num_gen"
+require_relative "../lib/cracker.rb"
