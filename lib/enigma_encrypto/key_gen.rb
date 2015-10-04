@@ -6,7 +6,6 @@ module EnigmaEncrypto
 
     def initialize
       rand = Random.new
-      # @rand_num = ("%05d" % rand(0..99999)).split("")
       @rand_num = rand(10000..99999).to_s.split("")
     end
 
