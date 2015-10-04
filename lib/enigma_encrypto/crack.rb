@@ -51,10 +51,9 @@ module EnigmaEncrypto
       exit if !check_command_args
       get_crack_key
       crack
-      p @key
       @key.map!{|digit| "%d" % digit }
       @key = Serialize.new(@key).action
-      puts "Cracked #{@encrypted} and created #{@cracked} #{@key} with date #{@date} and without key."
+      puts "Cracked #{@encrypted} and created #{@cracked} with key #{@key} and date #{@date}."
       true
     end
     

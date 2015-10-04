@@ -1,7 +1,6 @@
 module EnigmaEncrypto
-  class Serialize
 
-    attr_accessor :key
+  class Serialize
 
     def initialize(key)
       @key = key
@@ -36,7 +35,7 @@ module EnigmaEncrypto
     end
 
     def action
-      p make_all_keys_positive
+      make_all_keys_positive
       create_original_key_array
       make_new_key_string
     end
@@ -67,4 +66,5 @@ module EnigmaEncrypto
       end
 
   end
+
 end
