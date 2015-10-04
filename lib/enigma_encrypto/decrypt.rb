@@ -68,5 +68,3 @@ module EnigmaEncrypto
   end
 
 end
-  # d = Decrypt.new
-  # d.action

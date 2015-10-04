@@ -22,7 +22,6 @@ module EnigmaEncrypto
 
     def check_command_args
       operation = @file_handler.check_file_useability(@message, @encrypted)
-      p operation
       return false if operation == false || operation == "c"
       File.truncate(@encrypted, 0) if operation == "w"
       true
@@ -38,7 +37,6 @@ module EnigmaEncrypto
     def action
       exit if !get_command_args
       exit if !check_command_args
-      p check_command_args
       encrypt
       key = @rotation_num_gen.showkey
       date = @rotation_num_gen.today_date
@@ -68,5 +66,3 @@ module EnigmaEncrypto
   end
 
 end
-  # e = Encrypt.new
-  # e.action

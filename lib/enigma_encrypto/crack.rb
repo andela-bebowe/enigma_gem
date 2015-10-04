@@ -1,9 +1,4 @@
-#require_relative "lib_helper"
-require_relative "cracker"
-require_relative "dateoffset_gen"
-require_relative "file_handler"
-require_relative "rotator"
-require_relative "rotation_num_gen"
+require_relative "lib_helper"
 
 module EnigmaEncrypto
   
@@ -54,9 +49,12 @@ module EnigmaEncrypto
     def action
       exit if !get_command_args
       exit if !check_command_args
+      get_crack_key
       crack
+      p @key
       @key.map!{|digit| "%d" % digit }
-      puts "Cracked #{@cracked} #{@key} with date #{@date} and without key."
+      @key = Serialize.new(@key).action
+      puts "Cracked #{@encrypted} and created #{@cracked} #{@key} with date #{@date} and without key."
       true
     end
     
@@ -81,5 +79,3 @@ module EnigmaEncrypto
   end
 
 end
-  # c = Crack.new
-  # c.action
