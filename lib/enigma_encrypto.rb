@@ -1,4 +1,4 @@
-require "main_lib_helper.rb"
+require "gem_lib_helper.rb"
 
 module EnigmaEncrypto
   def self.encrypt
