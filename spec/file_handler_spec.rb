@@ -30,9 +30,8 @@ describe "FileHandler" do
     end
     it "should return an operation if file2 exists." do
       #file to be written to already exists.
-      @filehandler.stub(:operation).and_return("cancel")
       @file2 = "testfile2.txt"
-      expect(@filehandler.check_file_useability(@file1, @file2)) == :operation
+      expect(@filehandler.check_file_useability(@file1, @file2).nil?).to eq false
     end
 
   end
