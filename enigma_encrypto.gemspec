@@ -9,7 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ebowe Blessing"]
   spec.email         = ["blessing.ebowe@andela.com"]
   spec.summary       = %q{Encryper, Decrypter and Cracker when you forget your key}
-  spec.homepage      = ""
   spec.description   = "See Readme doc."
   spec.license       = "MIT"
   spec.files         = `git ls-files -z`.split("\x0")
