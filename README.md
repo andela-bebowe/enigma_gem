@@ -26,9 +26,9 @@ Or install it yourself as:
 
 ## Usage
 
-To use add the directory to the bin folder of this gem to your Systems Path/Environment variables.
-You can then call "encrypt/decrypt/crack", on the file you want to work on, and also with a destination file name.
-File to be encrypted/decrypted/cracked must be in your working directory.
+To use add the directory of the bin folder of this gem to your Systems Path/Environment variables.
+You can then call `encrypt`, `decrypt` or `crack`, on the file you want to work on, and also with a destination file name.
+File to be encrypted, decrypted or cracked must be in your working directory.
 
 Example: To call encrypt on a message.txt file in my desktop folder
 
