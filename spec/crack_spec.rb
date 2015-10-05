@@ -55,7 +55,7 @@ describe "Crack" do
       it "should return an array of size four" do
         expect(@crack.get_crack_key.class).to eql Array
       end
-      it "should contain for elements" do
+      it "should contain four elements" do
         expect(@crack.get_crack_key.size).to eq 4
       end
       it "should give accurate result" do

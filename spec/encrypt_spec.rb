@@ -41,6 +41,10 @@ describe "Encrypt" do
     it "should return true for valid files" do
       expect(@encrypter.check_command_args) == true
     end
+    it "should be false for 'cancel' operation" do
+      @encrypter.stub(:operation).and_return("c")
+      expect(@encrypter.check_command_args) == false
+    end
     it "should be false for invalid files" do
       @encrypter.instance_variable_set(:@message, "t.txt")
       expect(@encrypter.check_command_args) == false

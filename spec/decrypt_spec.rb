@@ -35,13 +35,23 @@ describe "Decrypt" do
     describe "#get_command_args" do
 
       it "should be false for incorrect number of argument" do
-        expect(@decrypter.get_command_args).to eql false
+        expect(@decrypter.get_command_args).to eq false
       end
 
     end
 
     describe "#check_command_args" do
-
+      it "should return true for correct key and date" do
+        expect(@decrypter.check_command_args) == true
+      end
+      it "should return false for incorrect key" do
+        @decrypter.instance_variable_set(:@key, "145")
+        expect(@decrypter.check_command_args) == false
+      end
+      it "should return false for incorrect date" do
+        @decrypter.instance_variable_set(:@key, "01453")
+        expect(@decrypter.check_command_args) == false
+      end
       it "should return true for valid files" do
         expect(@decrypter.check_command_args) == true
       end
