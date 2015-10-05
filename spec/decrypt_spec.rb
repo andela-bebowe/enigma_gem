@@ -1,13 +1,11 @@
 require_relative "spec_helper"
 
 describe "Decrypt" do
-
   before :all do
     @decrypter = EnigmaEncrypto::Decrypt.new
   end
 
   describe "@decrypter" do
-
     it "should be an Decrypt obj" do
       expect(@decrypter.class).to be EnigmaEncrypto::Decrypt
     end
@@ -20,11 +18,9 @@ describe "Decrypt" do
     it "should have an instance of RotationNumGen obj" do
       expect(@decrypter.instance_variable_get(:@rotation_num_gen).class) == EnigmaEncrypto::RotationNumGen
     end
-
   end
 
   describe "#methods" do
-    
     before :all do
       @decrypter.instance_variable_set(:@encrypted, "encrypted.txt")
       @decrypter.instance_variable_set(:@decrypted, "decrypted.txt")
@@ -33,11 +29,9 @@ describe "Decrypt" do
     end
 
     describe "#get_command_args" do
-
       it "should be false for incorrect number of argument" do
         expect(@decrypter.get_command_args).to eq false
       end
-
     end
 
     describe "#check_command_args" do
@@ -59,7 +53,6 @@ describe "Decrypt" do
         @decrypter.instance_variable_set(:@encrypted, "t.txt")
         expect(@decrypter.check_command_args) == false
       end
-
     end
 
     describe "#action" do
@@ -67,7 +60,5 @@ describe "Decrypt" do
         expect { @decrypter.action }.to raise_error(SystemExit)
       end
     end
-
   end
-
 end

@@ -1,9 +1,7 @@
 require_relative "lib_helper"
 
 module EnigmaEncrypto
-  
   class Crack
-
     def initialize
       @file_handler = FileHandler.new
       @rotator = Rotator.new
@@ -58,7 +56,6 @@ module EnigmaEncrypto
     end
     
     private
-
       def crack_encrypted
         reverse_array_index = 0
         while @length > 0
@@ -74,7 +71,5 @@ module EnigmaEncrypto
         cracked_char = @rotator.reverse_text(character, @reverse_array[index])
         @file_handler.writer(@cracked, cracked_char)
       end
-
   end
-
 end

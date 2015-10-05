@@ -1,7 +1,5 @@
 module EnigmaEncrypto
-
   class FileHandler
-
     #file1 represents file to be read from
     #file2 represents file to be written to
 
@@ -44,6 +42,5 @@ module EnigmaEncrypto
         end
         return operation
       end 
-
   end
 end

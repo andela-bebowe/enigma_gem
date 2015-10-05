@@ -1,13 +1,12 @@
 require_relative "spec_helper"
 
 describe "Cracker" do
-
   before :all do
     opened_file = File.open("encrypted.txt", "r")
     length = opened_file.size
     @cracker = EnigmaEncrypto::Cracker.new(opened_file, length, 7225)
   end
-
+  
   describe "Cracker object" do
     it "should be an instance of Cracker class" do
       expect(@cracker).to be_an_instance_of EnigmaEncrypto::Cracker

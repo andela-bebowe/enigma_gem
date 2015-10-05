@@ -2,9 +2,7 @@ require_relative "dateoffset_gen"
 require_relative "key_gen"
 
 module EnigmaEncrypto
-  
   class RotationNumGen
-
     attr_accessor :key, :offset, :showkey, :today_date
     
     def initialize
@@ -35,6 +33,5 @@ module EnigmaEncrypto
       @offset = date
       rotation_num_array
     end
-    
   end
 end

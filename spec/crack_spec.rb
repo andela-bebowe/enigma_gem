@@ -1,13 +1,11 @@
 require_relative "spec_helper"
 
 describe "Crack" do
-
   before :all do
     @crack = EnigmaEncrypto::Crack.new
   end
 
   describe "Crack object @crack" do
-    
     it "should be a crack object" do
       expect(@crack.class).to be EnigmaEncrypto::Crack
     end
@@ -20,11 +18,9 @@ describe "Crack" do
     it "should have an instance of RotationNumGen obj" do
       expect(@crack.instance_variable_get(:@rotation_num_gen).class) == EnigmaEncrypto::RotationNumGen
     end
-
   end
 
   describe "methods" do
-
     before :each do
       @crack.instance_variable_set(:@encrypted, "encrypted.txt")
       @crack.instance_variable_set(:@cracked, "cracked.txt")
@@ -32,15 +28,12 @@ describe "Crack" do
     end
 
     describe "#get_command_args" do
-    
       it "should be false for incorrect number of argument" do
         expect(@crack.get_command_args).to eql false
       end
-
     end
 
     describe "#check_command_args" do
-
       it "should return true for valid files" do
         expect(@crack.check_command_args) == true
       end
@@ -48,7 +41,6 @@ describe "Crack" do
         @crack.instance_variable_set(:@encrypted, "empty.txt")
         expect(@crack.check_command_args) == false
       end
-
     end
 
     describe "#get_crack_key" do
@@ -68,7 +60,5 @@ describe "Crack" do
         expect { @crack.action }.to raise_error(SystemExit)
       end
     end
-
-  end  
-
+  end
 end

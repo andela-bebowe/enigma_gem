@@ -2,9 +2,7 @@ require_relative "rotation_num_gen"
 require_relative "rotator"
 
 module EnigmaEncrypto
-
   class Cracker
-    
     def initialize(file, length, offset)
       @offset = offset
       @file = file
@@ -46,7 +44,5 @@ module EnigmaEncrypto
       the_end_arr
       creating_key
     end
-
   end
-
 end

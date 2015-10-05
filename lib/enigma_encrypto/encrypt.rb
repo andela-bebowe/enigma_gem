@@ -1,9 +1,7 @@
 require_relative "lib_helper"
 
 module EnigmaEncrypto
-  
   class Encrypt
-
     def initialize
       @file_handler = FileHandler.new
       @rotator = Rotator.new
@@ -45,7 +43,6 @@ module EnigmaEncrypto
     end
 
     private
-
       def encrypt_message(length)
         rotation_num_index = 0
         while length > 0
@@ -62,7 +59,5 @@ module EnigmaEncrypto
         rotated_char = @rotator.rotate_text(character, @rotation[index])
         @file_handler.writer(@encrypted, rotated_char)
       end
-
   end
-
 end

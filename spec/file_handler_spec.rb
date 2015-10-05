@@ -1,22 +1,18 @@
 require_relative "spec_helper"
 
 describe "FileHandler" do
-
   before :each do
     @filehandler = EnigmaEncrypto::FileHandler.new
     @file1, @file2 = "testfile.txt", "encrypt.txt"
   end
 
   describe "@filehandler" do
-
     it "should be a FileHandler obj" do
       expect(@filehandler.class).to be EnigmaEncrypto::FileHandler
     end
-
   end
 
   describe "#check_file_useability" do
-
     it "should return true when the two files are good to go" do
       expect(@filehandler.check_file_useability(@file1, @file2)) == true
     end
@@ -33,28 +29,5 @@ describe "FileHandler" do
       @file2 = "testfile2.txt"
       expect(@filehandler.check_file_useability(@file1, @file2).nil?).to eq false
     end
-
   end
-
-  # describe "#read" do
-
-  #   it "should open a file for reading" do
-  #     readable = @filehandler.read(@file1)
-  #     expect(readable.closed?) == false
-  #   end
-
-  # end
-
-  # describe "#writer" do
-
-  #   it "should write to file" do
-      
-  #     initial = File.new("testfile2.txt").size
-  #     writable = @filehandler.writer("testfile2.txt", "tgyhj")
-  #     final = File.new("testfile2.txt").size
-  #     expect(final > initial ) == true
-  #   end
-
-  # end
-
 end

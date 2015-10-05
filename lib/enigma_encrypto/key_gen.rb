@@ -1,7 +1,5 @@
 module EnigmaEncrypto
-  
   class KeyGen
-
     attr_accessor :rand_num
 
     def initialize
@@ -23,7 +21,6 @@ module EnigmaEncrypto
     end
 
     private
-
       def generate_keys
         key_values = []
         4.times do |index|
@@ -31,6 +28,5 @@ module EnigmaEncrypto
         end
         key_values
       end
-
   end
 end

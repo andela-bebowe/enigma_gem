@@ -1,7 +1,5 @@
 module EnigmaEncrypto
-
   class Serialize
-
     def initialize(key)
       @key = key
     end
@@ -41,7 +39,6 @@ module EnigmaEncrypto
     end
 
     private
-
       def key_getter(key0, key1)
         @key1 = key1
         @count = 0
@@ -62,9 +59,6 @@ module EnigmaEncrypto
             @count = 0
           end
         end
-
       end
-
   end
-
 end

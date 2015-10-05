@@ -1,7 +1,5 @@
 module EnigmaEncrypto
-  
   class DateOffsetGen
-
     attr_accessor :todays_date
 
     def initialize
@@ -18,12 +16,10 @@ module EnigmaEncrypto
     end
 
     private
-
       def date_squared_last_four
         (@todays_date.to_i**2).to_s.split("").slice(-4..-1).map do |num|
           num.to_i
         end
       end
-
   end
 end

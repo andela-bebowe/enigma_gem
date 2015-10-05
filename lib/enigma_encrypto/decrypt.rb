@@ -1,9 +1,7 @@
 require_relative "lib_helper"
 
 module EnigmaEncrypto
-  
   class Decrypt
-
     def initialize
       @file_handler = FileHandler.new
       @rotator = Rotator.new
@@ -48,7 +46,6 @@ module EnigmaEncrypto
     end
 
     private
-
       def decrypt_message(length)
         reverse_num_index = 0
         while length > 0
@@ -64,7 +61,5 @@ module EnigmaEncrypto
         reversed_char = @rotator.reverse_text(character, @reverse_array[index])
         @file_handler.writer(@decrypted, reversed_char)
       end
-
   end
-
 end
