@@ -1,16 +1,16 @@
 require_relative "spec_helper"
 
-describe FileHandler do
+describe "FileHandler" do
 
   before :each do
-    @filehandler = FileHandler.new
+    @filehandler = EnigmaEncrypto::FileHandler.new
     @file1, @file2 = "testfile.txt", "encrypt.txt"
   end
 
   describe "@filehandler" do
 
     it "should be a FileHandler obj" do
-      expect(@filehandler.class).to be FileHandler
+      expect(@filehandler.class).to be EnigmaEncrypto::FileHandler
     end
 
   end
@@ -49,6 +49,7 @@ describe FileHandler do
   # describe "#writer" do
 
   #   it "should write to file" do
+      
   #     initial = File.new("testfile2.txt").size
   #     writable = @filehandler.writer("testfile2.txt", "tgyhj")
   #     final = File.new("testfile2.txt").size

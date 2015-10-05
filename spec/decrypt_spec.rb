@@ -1,24 +1,24 @@
 require_relative "spec_helper"
 
-describe Decrypt do
+describe "Decrypt" do
 
   before :all do
-    @decrypter = Decrypt.new
+    @decrypter = EnigmaEncrypto::Decrypt.new
   end
 
   describe "@decrypter" do
 
     it "should be an Decrypt obj" do
-      expect(@decrypter.class).to be Decrypt
+      expect(@decrypter.class).to be EnigmaEncrypto::Decrypt
     end
     it "should have an instance of Rotator obj" do
-      expect(@decrypter.instance_variable_get(:@rotator).class) == Rotator
+      expect(@decrypter.instance_variable_get(:@rotator).class) == EnigmaEncrypto::Rotator
     end
     it "should have an instance of FileHandler obj" do
-      expect(@decrypter.instance_variable_get(:@file_handler).class) == FileHandler
+      expect(@decrypter.instance_variable_get(:@file_handler).class) == EnigmaEncrypto::FileHandler
     end
     it "should have an instance of RotationNumGen obj" do
-      expect(@decrypter.instance_variable_get(:@rotation_num_gen).class) == RotationNumGen
+      expect(@decrypter.instance_variable_get(:@rotation_num_gen).class) == EnigmaEncrypto::RotationNumGen
     end
 
   end

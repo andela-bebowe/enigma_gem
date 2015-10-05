@@ -5,12 +5,12 @@ describe "Cracker" do
   before :all do
     opened_file = File.open("encrypted.txt", "r")
     length = opened_file.size
-    @cracker = Cracker.new(opened_file, length, 7225)
+    @cracker = EnigmaEncrypto::Cracker.new(opened_file, length, 7225)
   end
 
   describe "Cracker object" do
     it "should be an instance of Cracker class" do
-      expect(@cracker).to be_an_instance_of Cracker
+      expect(@cracker).to be_an_instance_of EnigmaEncrypto::Cracker
     end
     it "should have a character_map" do
       expect(@cracker.instance_variable_get(:@character_map).nil?).to be false

@@ -1,24 +1,24 @@
 require_relative "spec_helper"
 
-describe Crack do
+describe "Crack" do
 
   before :all do
-    @crack = Crack.new
+    @crack = EnigmaEncrypto::Crack.new
   end
 
   describe "Crack object @crack" do
     
     it "should be a crack object" do
-      expect(@crack.class).to be Crack
+      expect(@crack.class).to be EnigmaEncrypto::Crack
     end
     it "should have an instance of Rotator obj" do
-      expect(@crack.instance_variable_get(:@rotator).class) == Rotator
+      expect(@crack.instance_variable_get(:@rotator).class) == EnigmaEncrypto::Rotator
     end
     it "should have an instance of FileHandler obj" do
-      expect(@crack.instance_variable_get(:@file_handler).class) == FileHandler
+      expect(@crack.instance_variable_get(:@file_handler).class) == EnigmaEncrypto::FileHandler
     end
     it "should have an instance of RotationNumGen obj" do
-      expect(@crack.instance_variable_get(:@rotation_num_gen).class) == RotationNumGen
+      expect(@crack.instance_variable_get(:@rotation_num_gen).class) == EnigmaEncrypto::RotationNumGen
     end
 
   end

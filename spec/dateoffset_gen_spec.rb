@@ -3,14 +3,14 @@ require_relative "spec_helper"
 describe "DateOffsetGen obj" do
 
   before :all do
-    @offsetgen = DateOffsetGen.new
+    @offsetgen = EnigmaEncrypto::DateOffsetGen.new
     @today = @offsetgen.todays_date
   end
 
   describe "@offsetgen" do
 
     it "should exist as an obj of OffsetGen" do
-    expect(@offsetgen.class).to eql DateOffsetGen
+    expect(@offsetgen.class).to eql EnigmaEncrypto::DateOffsetGen
     end
     it "should have a non empty today variable" do
       expect(@offsetgen.instance_variable_get(:@todays_date).class) == Time

@@ -1,9 +1,9 @@
 require_relative "spec_helper"
 
-describe KeyGen do
+describe "KeyGen" do
 
   before :all do
-    @keygen = KeyGen.new
+    @keygen = EnigmaEncrypto::KeyGen.new
     @rand_num = @keygen.rand_num
     @keys = @keygen.initial_rotation_keys
     @decryption_key = @keygen.initial_decryption_keys("12345")
@@ -12,7 +12,7 @@ describe KeyGen do
   describe "@keygen" do
 
     it "should exist as an obj of KeyGen" do
-      expect(@keygen.class).to eql KeyGen
+      expect(@keygen.class).to eql EnigmaEncrypto::KeyGen
     end
     it "should have an instance variables" do
       expect(@keygen.instance_variable_get(:@rand_num).class) == Random

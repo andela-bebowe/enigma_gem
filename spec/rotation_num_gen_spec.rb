@@ -1,23 +1,23 @@
 require_relative "spec_helper"
 
-describe RotationNumGen do
+describe "RotationNumGen" do
 
   before :all do
-    @rotation_num_gen = RotationNumGen.new
+    @rotation_num_gen = EnigmaEncrypto::RotationNumGen.new
   end
 
   describe "RotationNumGen obj" do
 
     it "should be an instance of RotationNumGen" do
-      expect(@rotation_num_gen.class).to be RotationNumGen
+      expect(@rotation_num_gen.class).to be EnigmaEncrypto::RotationNumGen
     end
     it "should have an Array of key values" do
-      expect(@rotation_num_gen.instance_variable_get(:@key).class) == KeyGen
+      expect(@rotation_num_gen.instance_variable_get(:@key).class) == EnigmaEncrypto::KeyGen
       expect(@rotation_num_gen.key.nil?).to be false
       expect(@rotation_num_gen.key.is_a? Array) == true
     end
     it "should have an Array of offset values" do
-      expect(@rotation_num_gen.instance_variable_get(:@today_date).class) == DateOffsetGen
+      expect(@rotation_num_gen.instance_variable_get(:@today_date).class) == EnigmaEncrypto::DateOffsetGen
       expect(@rotation_num_gen.offset.nil?).to be false
       expect(@rotation_num_gen.offset.is_a? Array) == true
     end

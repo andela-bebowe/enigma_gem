@@ -1,14 +1,14 @@
 require_relative "spec_helper"
 
-describe Rotator do
+describe "Rotator" do
 
   before :all do
-    @rotator = Rotator.new
+    @rotator = EnigmaEncrypto::Rotator.new
   end
 
   describe "Rotator obj" do
     it "should be an object of Rotator class" do
-      expect(@rotator).to be_an_instance_of Rotator
+      expect(@rotator).to be_an_instance_of EnigmaEncrypto::Rotator
     end
   end
 
