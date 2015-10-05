@@ -32,13 +32,15 @@ File to be encrypted, decrypted or cracked must be in your working directory.
 
 Example: To call encrypt on a message.txt file in my desktop folder
 
-$ cd desktop
-$ encrypt message.txt encrypted.txt
-=>#Created encrypted.txt with the key 12345 and date 300815
+    $ cd desktop
+
+    $ encrypt message.txt encrypted.txt
+
+    =>#Created encrypted.txt with the key 12345 and date 300815
 
 You can also write the absolute path of the file if you dont want to change working directory.
 
-$ encrypt desktop/message.txt encrypted.txt
+    $ encrypt desktop/message.txt encrypted.txt
 
 ## Contributing
 
