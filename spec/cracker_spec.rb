@@ -19,7 +19,7 @@ describe "Cracker" do
   
   describe "#locate_position_to_start_crack" do
     it "should return a number less than 7" do
-      expect(@cracker.locate_position_to_start_crack).to be 2
+      expect(@cracker.locate_position_to_start_crack).to be 3
     end
   end
 
@@ -37,13 +37,13 @@ describe "Cracker" do
 
   describe "#creating_key" do
     it "should create an array of keys" do
-      expect(@cracker.creating_key).to eq [14, 12, 15, -20]
+      expect(@cracker.creating_key).to eq [-9, 16, -16, -32]
     end
   end
 
   describe "#get_key" do
     it "get_key by calling all methods" do
-      expect(@cracker.get_key).to eq [14, 12, 15, -20]
+      expect(@cracker.get_key).to eq [-9, 16, -16, -32]
     end
   end
 end
