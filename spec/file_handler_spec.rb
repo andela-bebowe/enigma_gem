@@ -17,17 +17,17 @@ describe "FileHandler" do
       expect(@filehandler.check_file_useability(@file1, @file2)) == true
     end
     it "should return false if file1 is not eligible for operation" do
-      #testfile2.txt is an empty file.
+      # testfile2.txt is an empty file.
       @file1 = "testfile2.txt"
       expect(@filehandler.check_file_useability(@file1, @file2)) == false
-      #unexistent.txt is an unexistent file.
+      # unexistent.txt is an unexistent file.
       @file1 = "unexistent.txt"
       expect(@filehandler.check_file_useability(@file1, @file2)) == false
     end
     it "should return an operation if file2 exists." do
-      #file to be written to already exists.
+      # file to be written to already exists.
       @file2 = "testfile2.txt"
-      expect(@filehandler.check_file_useability(@file1, @file2).nil?).to eq false
+      expect(@filehandler.check_file_useability(@file1, @file2).nil?) == false
     end
   end
 end

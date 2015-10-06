@@ -36,11 +36,14 @@ describe "Cracker" do
 
   describe "#creating_key" do
     it "should create an array of keys" do
-      expect(@cracker.creating_key).to eq [-9, 16, -16, -32]
+      expect(@cracker.creating_key) == [-9, 16, -16, -32]
     end
   end
 
   describe "#get_key" do
+    it "should have 4 elements" do
+      expect(@cracker.get_key.size) == 4
+    end
     it "get_key by calling all methods" do
       expect(@cracker.get_key).to eq [-9, 16, -16, -32]
     end
