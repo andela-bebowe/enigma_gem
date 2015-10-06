@@ -1,0 +1,12 @@
+require "coveralls"
+Coveralls.wear!
+require_relative "../lib/enigma_encrypto/crack"
+require_relative "../lib/enigma_encrypto/dateoffset_gen"
+require_relative "../lib/enigma_encrypto/decrypt"
+require_relative "../lib/enigma_encrypto/encrypt"
+require_relative "../lib/enigma_encrypto/file_handler"
+require_relative "../lib/enigma_encrypto/key_gen"
+require_relative "../lib/enigma_encrypto/rotator"
+require_relative "../lib/enigma_encrypto/rotation_num_gen"
+require_relative "../lib/enigma_encrypto/cracker"
+require_relative "../lib/enigma_encrypto/serialize"
