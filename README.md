@@ -1,4 +1,4 @@
-# EnigmaEncrypto
+# EnigmaEncrypto [![Coverage Status](https://coveralls.io/repos/andela-bebowe/enigma_gem/badge.svg?branch=temp&service=github)](https://coveralls.io/github/andela-bebowe/enigma_gem?branch=temp)
 
 This is my first checkpoint project done under the Andela Institute curriculum titled ENIGMA.
 
