@@ -51,7 +51,7 @@ describe "Crack" do
         expect(@crack.get_crack_key.size).to eq 4
       end
       it "should give accurate result" do
-        expect(@crack.get_crack_key).to eq [-15, 14, -18, -36]
+        expect(@crack.get_crack_key).to eq [-35, -5, 3, 1]
       end
     end
 

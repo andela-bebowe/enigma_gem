@@ -20,7 +20,7 @@ module EnigmaEncrypto
     end
 
     def check_command_args
-      if ("%06d" % (@date.to_i)).size != 6 || @date.to_i <= 0
+      if @date.to_i.to_s != @date && @date.size != 6
         puts "Incorrect date entered"
         return false
       end
@@ -65,11 +65,12 @@ module EnigmaEncrypto
           reverse_array_index = 0 if reverse_array_index == 4
           @length -= 1
         end
+        @file_handler.writer(@cracked, @cracked_char)
       end
 
       def reverse_encrypted(character, index)
-        cracked_char = @rotator.reverse_text(character, @reverse_array[index])
-        @file_handler.writer(@cracked, cracked_char)
+        @cracked_char = ""
+        @cracked_char += @rotator.reverse_text(character, @reverse_array[index])
       end
   end
 end

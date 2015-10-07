@@ -52,12 +52,13 @@ module EnigmaEncrypto
           rotation_num_index = 0 if rotation_num_index == 4
           length -= 1
         end
+        @file_handler.writer(@encrypted, @rotated_char)
       end
 
       def rotate_msg(character, index)
+        @rotated_char = ""
         @rotation = @rotation_num_gen.rotation_num_array
-        rotated_char = @rotator.rotate_text(character, @rotation[index])
-        @file_handler.writer(@encrypted, rotated_char)
+        @rotated_char += @rotator.rotate_text(character, @rotation[index])
       end
   end
 end

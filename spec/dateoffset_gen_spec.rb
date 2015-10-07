@@ -11,7 +11,7 @@ describe "DateOffsetGen obj" do
     expect(@offsetgen.class).to eql EnigmaEncrypto::DateOffsetGen
     end
     it "should have a non empty today variable" do
-      expect(@offsetgen.instance_variable_get(:@todays_date).class) == Time
+      expect(@today.class) == Time
       expect(@today.nil?).to eql false
       expect(@today.to_s.length).to eql 6
     end

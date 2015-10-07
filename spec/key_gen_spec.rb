@@ -13,7 +13,7 @@ describe "KeyGen" do
       expect(@keygen.class).to eql EnigmaEncrypto::KeyGen
     end
     it "should have an instance variables" do
-      expect(@keygen.instance_variable_get(:@rand_num).class) == Random
+      expect(@rand_num.class) == Random
     end
   end
 

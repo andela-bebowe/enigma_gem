@@ -21,9 +21,10 @@ module EnigmaEncrypto
     end
 
     def check_command_args
-      if ("%05d" % (@key.to_i)).size != 5 || ("%06d" % (@date.to_i)).size != 6
+      if @key.to_i.to_s != @key && @key.size != 5 && @date.size != 6 && @date.to_i.to_s != @date
         puts "Incorrect key or date entered"
-        return false; end
+        return false
+      end
       operation = @file_handler.check_file_useability(@encrypted, @decrypted)
       return false if operation == false || operation == "c"
       File.truncate(@decrypted, 0) if operation == "w"
@@ -55,11 +56,12 @@ module EnigmaEncrypto
           reverse_num_index = 0 if reverse_num_index == 4
           length -= 1
         end
+        @file_handler.writer(@decrypted, @reversed_char)
       end
 
       def reverse_msg(character, index)
-        reversed_char = @rotator.reverse_text(character, @reverse_array[index])
-        @file_handler.writer(@decrypted, reversed_char)
+        @reversed_char = ""
+        @reversed_char += @rotator.reverse_text(character, @reverse_array[index])
       end
   end
 end

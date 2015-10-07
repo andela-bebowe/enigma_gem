@@ -44,7 +44,8 @@ module EnigmaEncrypto
         @count = 0
         if key0[1] == key1[0]
           @new_key_array << key0
-          return key1; end
+          return key1
+        end
         while key0[1] != key1[0] do
           key1 = (key1.to_i + 39).to_s
           if key0[1] == key1[0]
