@@ -1,6 +1,6 @@
 require_relative "spec_helper"
 
-describe "Crack", fakefs: true  do
+describe "Crack" do
   before :all do
     @crack = EnigmaEncrypto::Crack.new
   end

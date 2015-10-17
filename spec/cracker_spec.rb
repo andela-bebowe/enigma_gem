@@ -1,6 +1,6 @@
 require_relative "spec_helper"
 
-describe "Cracker", fakefs: true do
+describe "Cracker" do
   before :all do
     opened_file = File.open("encrypted.txt", "r")
     length = opened_file.size
