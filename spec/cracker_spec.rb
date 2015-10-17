@@ -1,12 +1,12 @@
 require_relative "spec_helper"
 
-describe "Cracker" do
+describe "Cracker", fakefs: true do
   before :all do
     opened_file = File.open("encrypted.txt", "r")
     length = opened_file.size
     @cracker = EnigmaEncrypto::Cracker.new(opened_file, length, 7225)
   end
-  
+
   describe "Cracker object" do
     it "should be an instance of Cracker class" do
       expect(@cracker).to be_an_instance_of EnigmaEncrypto::Cracker
@@ -15,7 +15,7 @@ describe "Cracker" do
       expect(@cracker.instance_variable_get(:@character_map).nil?).to be false
     end
   end
-  
+
   describe "#locate_position_to_start_crack" do
     it "should return a number less than 7" do
       expect(@cracker.locate_position_to_start_crack).to be 1

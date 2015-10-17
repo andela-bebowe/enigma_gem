@@ -1,5 +1,9 @@
 require "coveralls"
 Coveralls.wear!
+require 'fakefs/spec_helpers'
+RSpec.configure do |config|
+  config.include FakeFS::SpecHelpers, fakefs: true
+end
 require_relative "../lib/enigma_encrypto/crack"
 require_relative "../lib/enigma_encrypto/dateoffset_gen"
 require_relative "../lib/enigma_encrypto/decrypt"

@@ -1,6 +1,6 @@
 require_relative "spec_helper"
 
-describe "Decrypt" do
+describe "Decrypt", fakefs: true do
   before :all do
     @decrypter = EnigmaEncrypto::Decrypt.new
   end
